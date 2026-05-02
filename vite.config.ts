@@ -5,9 +5,8 @@ import monacoEditorPlugin from 'vite-plugin-monaco-editor';
 
 const _monacoEditorPlugin = monacoEditorPlugin as any;
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/tophers-archipelago-web-client/',   // <-- IMPORTANT for GitHub Pages
   plugins: [
     vue(),
     _monacoEditorPlugin.default({})
@@ -17,4 +16,4 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-})
+});
